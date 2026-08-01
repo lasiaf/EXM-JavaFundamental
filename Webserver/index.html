@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Backend + JS Frontend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+            background: #f4f4f9;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: inline-block;
+            max-width: 450px;
+            width: 100%;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Frontend JavaScript & HTML</h2>
+        <p>File HTML terpisah ini dipanggil oleh Java Web Server, dan interaksinya diolah menggunakan JavaScript.</p>
+        
+        <button onclick="ambilDataDariJava()">Ambil Data dari Backend Java</button>
+        
+        <div id="result">Klik tombol di atas untuk mengambil data...</div>
+    </div>
+
+    <script>
+        // Kode JavaScript Frontend
+        async function ambilDataDariJava() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "Sedang mengambil data dari Java...";
+            
+            try {
+                // Memanggil API Endpoint yang disediakan oleh Java Backend
+                const response = await fetch('/api/waktu');
+                const data = await response.json();
+                
+                // Update tampilan HTML menggunakan JavaScript
+                resultDiv.innerHTML = `
+                    <p style="color: green; margin-bottom: 5px;">${data.pesan}</p>
+                    <small style="color: #666;">Waktu Server: ${data.waktu}</small>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = "<p style='color: red;'>Gagal mengambil data dari server!</p>";
+            }
+        }
+    </script>
+</body>
+</html>
