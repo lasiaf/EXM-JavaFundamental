@@ -1,5 +1,6 @@
 import Penurunan.*;
 import BasicCalculation.*;
+import Encapsulations.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,8 +9,8 @@ public class Main {
 
         isMain.basicCalc();
         isMain.inHeritage();
-
-
+        isMain.isOverride();
+        isMain.isEncapsulations();
 
 
     }
@@ -46,6 +47,37 @@ public class Main {
 
         this.spaceLine("");
     }
+    protected void isOverride(){
+        this.spaceLine("KONSEP OVERRIDE");
+
+        //KONSEP OVERRIDE
+        Kendaraan ob1 = new Kendaraan();
+        Pesawat ob2 = new Pesawat();
+        Kereta ob3 = new Kereta();
+
+        ob1.about();
+        ob2.about();
+        ob3.about();
+
+        //END - KONSEP OVERRIDE
+
+        this.spaceLine("");
+    }
+    protected void isEncapsulations() {
+        this.spaceLine("KONSEP ENCAPTUALTIONS");
+
+        //KONSEP ENCAPTUALTIONSE
+        Encap ec1 = new Encap();
+        ec1.setA(9);
+        ec1.setB(2);
+        System.out.println("Nilai A adalah : "+ec1.getA());
+        System.out.println("Nilai B adalah : "+ec1.getB());
+        System.out.println("Hasil pembagian adalah : "+ec1.getC());
+        //END - KONSEP ENCAPTUALTIONSE
+
+        this.spaceLine("");
+    }
+
     protected void spaceLine(String title) {
         if(title == "") {
             System.out.println("===========");

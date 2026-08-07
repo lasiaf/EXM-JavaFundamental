@@ -8,6 +8,7 @@ public class Pesawat extends Kendaraan {
         System.out.println(this.nama +", Jumlah Roda : "+this.jmlToilet);
     }
 
+    @Override
     public void about() {
         System.out.println("Ini class pesawat");
     }
