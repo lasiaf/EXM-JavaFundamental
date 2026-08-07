@@ -3,6 +3,8 @@ import BasicCalculation.*;
 import Encapsulations.*;
 import Constructor.*;
 import Abstraction.*;
+import Interface.*;
+import FileHandling.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +18,8 @@ public class Main {
         isMain.isEncapsulations();
         isMain.isAbstraction();
         isMain.isConstructor();
+        isMain.isInterface();
+        isMain.isFileHandling();
 
     }
     protected void basicCalc() {
@@ -134,6 +138,48 @@ public class Main {
 
         mc2.tampil();
         //END - KONSEP CONSTRUCTOR
+        this.spaceLine("");
+    }
+
+    protected void isInterface() {
+        this.spaceLine("KONSEP INTERFACE");
+
+        //KONSEP INTERFACE
+        PaymentService payService =
+                new PaymentService(new Bank());
+
+
+
+        payService.bayar();
+
+        PaymentService payService2 =
+                new PaymentService(new Gopay(), new Gopay());
+
+        payService2.bayar();
+        payService2.isiPoint();
+        payService2.klaimPoin();
+
+        //END - KONSEP INTERFACE
+        this.spaceLine("");
+    }
+
+    protected void isFileHandling() {
+        this.spaceLine("KONSEP FILE HANDLING");
+
+        //KONSEP FILE HANDLING
+        AppSetup    app1 = new  AppSetup();
+        String      myJSON = """
+        {
+                "app.name": "Belajar Java",
+                "db.host": "192.168.1.10",
+                "db.port": "5432"
+        }
+        """;
+        app1.delete();
+        app1.simpan(myJSON);
+        app1.baca();
+
+        //END - KONSEP FILE HANDLING
         this.spaceLine("");
     }
 
