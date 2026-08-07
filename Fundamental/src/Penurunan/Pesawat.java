@@ -12,4 +12,11 @@ public class Pesawat extends Kendaraan {
     public void about() {
         System.out.println("Ini class pesawat");
     }
+
+    @Override
+    public String lihatBahanBakar(){
+        bahanBakar  =   "Avtur";
+
+        return bahanBakar;
+    }
 }

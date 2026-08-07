@@ -10,4 +10,11 @@ public class Kereta extends Kendaraan {
     public void about(){
         System.out.println("Ini class kereta");
     }
+
+    @Override
+    public String lihatBahanBakar(){
+        bahanBakar  =   "Batu Bara";
+
+        return bahanBakar;
+    }
 }

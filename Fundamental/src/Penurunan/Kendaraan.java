@@ -6,6 +6,7 @@ public class Kendaraan {
     public int     jmlroda;
     public int     jmlkursi;
     public String  nama;
+    public String  bahanBakar;
 
     public void tampilJmlRoda(){
         System.out.println(this.nama +", Jumlah Roda : "+this.jmlroda);
@@ -17,5 +18,11 @@ public class Kendaraan {
 
     public void about(){
         System.out.println("Ini class kendaraan");
+    }
+
+    public String lihatBahanBakar(){
+        bahanBakar  =   "Bensin";
+
+        return bahanBakar;
     }
 }

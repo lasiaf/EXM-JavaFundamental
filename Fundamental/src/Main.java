@@ -1,6 +1,8 @@
 import Penurunan.*;
 import BasicCalculation.*;
 import Encapsulations.*;
+import Constructor.*;
+import Abstraction.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,8 +12,10 @@ public class Main {
         isMain.basicCalc();
         isMain.inHeritage();
         isMain.isOverride();
+        isMain.isPolymorphism();
         isMain.isEncapsulations();
-
+        isMain.isAbstraction();
+        isMain.isConstructor();
 
     }
     protected void basicCalc() {
@@ -63,18 +67,73 @@ public class Main {
 
         this.spaceLine("");
     }
-    protected void isEncapsulations() {
-        this.spaceLine("KONSEP ENCAPTUALTIONS");
+    protected void isPolymorphism(){
+        this.spaceLine("KONSEP POLYMORPHISM");
 
-        //KONSEP ENCAPTUALTIONSE
+        //KONSEP POLYMORPHISM
+        Kendaraan ob1 = new Kendaraan();
+        Kendaraan ob2 = new Pesawat();
+        Kendaraan ob3 = new Kereta();
+
+        /*
+        //INI KALAU DIJALANKAN TANPA PERULANGAN
+        ob1.lihatBahanBakar();
+        ob2.lihatBahanBakar();
+        ob3.lihatBahanBakar();
+        */
+
+        Kendaraan[] daftarKendaraan = {
+                new Pesawat(),
+                new Kendaraan(),
+                new Kereta()
+        };
+
+        for (Kendaraan h : daftarKendaraan) {
+            System.out.println(h.lihatBahanBakar());
+        }
+
+        //END - KONSEP POLYMORPHISM
+
+        this.spaceLine("");
+    }
+    protected void isAbstraction() {
+        this.spaceLine("KONSEP ABSTRACTION");
+
+        //KONSEP ABSTRACTION
+        Air ab1 = new Uap();
+        Air ab2 = new Padat();
+
+        ab1.bentuk();
+        ab2.bentuk();
+
+        //END - KONSEP ABSTRACTION
+        this.spaceLine("");
+    }
+
+    protected void isEncapsulations() {
+        this.spaceLine("KONSEP ENCAPSULATIONS");
+
+        //KONSEP ENCAPSULATIONS
         Encap ec1 = new Encap();
         ec1.setA(9);
         ec1.setB(2);
         System.out.println("Nilai A adalah : "+ec1.getA());
         System.out.println("Nilai B adalah : "+ec1.getB());
         System.out.println("Hasil pembagian adalah : "+ec1.getC());
-        //END - KONSEP ENCAPTUALTIONSE
+        //END - KONSEP ENCAPSULATIONS
 
+        this.spaceLine("");
+    }
+    protected void isConstructor() {
+        this.spaceLine("KONSEP CONSTRUCTOR");
+
+        //KONSEP CONSTRUCTOR
+        myConstructor mc1   = new myConstructor();
+        myConstructor mc2    = new myConstructor("Honda");
+        myConstructor mc3   = new myConstructor("Toyota", 2025);
+
+        mc2.tampil();
+        //END - KONSEP CONSTRUCTOR
         this.spaceLine("");
     }
 
