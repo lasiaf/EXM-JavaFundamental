@@ -5,6 +5,7 @@ import Constructor.*;
 import Abstraction.*;
 import Interface.*;
 import FileHandling.*;
+import CollectionFramework.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class Main {
         isMain.isConstructor();
         isMain.isInterface();
         isMain.isFileHandling();
+        isMain.isCollectionFramework();
 
     }
     protected void basicCalc() {
@@ -183,9 +185,31 @@ public class Main {
         this.spaceLine("");
     }
 
+    protected void isCollectionFramework() {
+        this.spaceLine("KONSEP COLLECTION FRAMEWORK");
+
+        //KONSEP COLLECTION FRAMEWORK
+        //ARRAY LIST
+        this.spaceLine("Array List");
+        ArrayList li1 = new ArrayList();
+        li1.ArrayList();
+
+        this.spaceLine("-");
+        //HASH MAP
+        this.spaceLine("Hashmap");
+        HashMapList li2 = new HashMapList();
+        li2.create();
+        //END - KONSEP COLLECTION FRAMEWORK
+        this.spaceLine("");
+    }
+
     protected void spaceLine(String title) {
         if(title == "") {
             System.out.println("===========");
+            System.out.println("");
+        }
+        else if(title == "-") {
+            System.out.println("_____________");
             System.out.println("");
         }
         else{
