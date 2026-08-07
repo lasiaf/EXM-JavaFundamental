@@ -1,12 +1,6 @@
-package contoh;
+package BasicCalculation;
 
-public class Contoh {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        Contoh contoh = new Contoh();
-        contoh.calculation();
-    }
-
+public class Calculation {
     public void calculation() {
         float gajiPokok, gajiBersih, potonganGaji;
 

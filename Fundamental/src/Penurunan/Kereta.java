@@ -1,5 +1,6 @@
-public class kereta extends kendaraan {
+package Penurunan;
 
+public class Kereta extends Kendaraan {
     int     jmlGerbong;
 
     public void tampilJmlGerbong(){

@@ -1,6 +1,8 @@
-public class kendaraan {
+package Penurunan;
+
+public class Kendaraan {
     //sebagai superclass
-    
+
     public int     jmlroda;
     public int     jmlkursi;
     public String  nama;
