@@ -1,5 +1,8 @@
 package CollectionFramework;
 
+import java.util.List;
+import java.util.Arrays;
+
 public class ArrayList {
 
     public void ArrayList(){
@@ -43,5 +46,40 @@ public class ArrayList {
             this.nama = nama;
             this.umur = umur;
         }
+    }
+    public List createList(){
+        List<Integer> angka =
+                Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        return angka;
+    }
+
+    public void listStream(){
+
+        List<Integer> angka;
+        angka = this.createList();
+        angka.stream()
+                .filter(n -> n % 2 == 0)
+                .forEach(System.out::println);
+    }
+    public void mapStream() {
+        //TRANSFORMASI DATA
+        System.out.println("~Transformasi Data dengan Map~");
+        List<Integer> angka;
+        angka = this.createList();
+        angka.stream()
+                .map(n -> n * 10)
+                .forEach(System.out::println);
+    }
+    public void mapSumStream() {
+        //TRANSFORMASI DATA
+        System.out.println("~Transformasi Data dengan Map (Sum)~");
+        List<Integer> angka;
+        angka = this.createList();
+
+        int total =
+                angka.stream()
+                        .reduce(0, Integer::sum);
+
+        System.out.println(total);
     }
 }

@@ -6,6 +6,8 @@ import Abstraction.*;
 import Interface.*;
 import FileHandling.*;
 import CollectionFramework.*;
+import Lambda.*;
+import Multithreading.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +24,8 @@ public class Main {
         isMain.isInterface();
         isMain.isFileHandling();
         isMain.isCollectionFramework();
-
+        isMain.isLambda();
+        isMain.isMultithreading();
     }
     protected void basicCalc() {
         this.spaceLine("KONSEP KALKULASI SEDERHANA");
@@ -199,7 +202,55 @@ public class Main {
         this.spaceLine("Hashmap");
         HashMapList li2 = new HashMapList();
         li2.create();
+
+        this.spaceLine("-");
+        //HASH MAP
+        this.spaceLine("Hashset");
+        HashSetList li3 = new HashSetList();
+        li3.show();
+
         //END - KONSEP COLLECTION FRAMEWORK
+        this.spaceLine("");
+    }
+
+    protected void isLambda() {
+        this.spaceLine("KONSEP LAMBDA & STREAM");
+        this.spaceLine("LAMBDA");
+        //KONSEP LAMBDA
+        Salam   ss1 = new   Salam();
+        ss1.doAct();
+
+        System.out.println("Hasil perhitungan = "+ss1.Calc(4,9));
+
+
+        this.spaceLine("-");
+        //STREAM
+        this.spaceLine("STREAM");
+        //Mengambil bilangan yang hanya bilangan genap
+        ArrayList li1 = new ArrayList();
+        li1.listStream();
+        li1.mapStream();
+        li1.mapSumStream();
+        //END - KONSEP LAMBDA & STREAM
+        this.spaceLine("");
+    }
+
+    protected void isMultithreading() {
+        this.spaceLine("KONSEP MULTITHREADING");
+        //KONSEP MULTITHREADING
+
+        Thread thread =
+                new Thread(
+                        new DownloadThread()
+                );
+
+
+        thread.start();
+
+        Threads tr1 = new Threads();
+        tr1.run();
+
+        //END - KONSEP MULTITHREADING
         this.spaceLine("");
     }
 
