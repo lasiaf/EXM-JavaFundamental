@@ -2,6 +2,8 @@ package Multithreading;
 
 public class Threads {
     public void run(){
+
+        
         Thread t1 = new Thread(() -> {
             for(int i = 1; i <= 5; i++) {
                 System.out.println(

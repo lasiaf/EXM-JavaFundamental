@@ -8,6 +8,7 @@ import FileHandling.*;
 import CollectionFramework.*;
 import Lambda.*;
 import Multithreading.*;
+import JDBC.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +27,7 @@ public class Main {
         isMain.isCollectionFramework();
         isMain.isLambda();
         isMain.isMultithreading();
+        isMain.isJDBC();
     }
     protected void basicCalc() {
         this.spaceLine("KONSEP KALKULASI SEDERHANA");
@@ -251,6 +253,15 @@ public class Main {
         tr1.run();
 
         //END - KONSEP MULTITHREADING
+        this.spaceLine("");
+    }
+
+    protected void isJDBC() {
+        this.spaceLine("KONSEP JDBC");
+        //KONSEP JDBC
+
+
+        //END - JDBC
         this.spaceLine("");
     }
 
