@@ -1,14 +1,23 @@
-import Penurunan.*;
-import BasicCalculation.*;
-import Encapsulations.*;
-import Constructor.*;
-import Abstraction.*;
-import Interface.*;
-import FileHandling.*;
-import CollectionFramework.*;
-import Lambda.*;
-import Multithreading.*;
-import JDBC.*;
+import Abstraction.Air;
+import Abstraction.Padat;
+import Abstraction.Uap;
+import BasicCalculation.Calculation;
+import CollectionFramework.ArrayList;
+import CollectionFramework.HashMapList;
+import CollectionFramework.HashSetList;
+import Constructor.myConstructor;
+import Encapsulations.Encap;
+import FileHandling.AppSetup;
+import Interface.Bank;
+import Interface.Gopay;
+import Interface.PaymentService;
+import JDBC.Postgre;
+import Lambda.Salam;
+import Multithreading.DownloadThread;
+import Multithreading.Threads;
+import Penurunan.Kendaraan;
+import Penurunan.Kereta;
+import Penurunan.Pesawat;
 
 public class Main {
     public static void main(String[] args) {
@@ -174,7 +183,7 @@ public class Main {
         this.spaceLine("KONSEP FILE HANDLING");
 
         //KONSEP FILE HANDLING
-        AppSetup    app1 = new  AppSetup();
+        AppSetup app1 = new  AppSetup();
         String      myJSON = """
         {
                 "app.name": "Belajar Java",
@@ -219,7 +228,7 @@ public class Main {
         this.spaceLine("KONSEP LAMBDA & STREAM");
         this.spaceLine("LAMBDA");
         //KONSEP LAMBDA
-        Salam   ss1 = new   Salam();
+        Salam   ss1 = new Salam();
         ss1.doAct();
 
         System.out.println("Hasil perhitungan = "+ss1.Calc(4,9));

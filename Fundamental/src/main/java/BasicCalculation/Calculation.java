@@ -13,4 +13,8 @@ public class Calculation {
         System.out.println("Potongan Gaji: " + potonganGaji);
 
     }
+    public float hitungGajiBersih(float gajiPokok) {
+        float potonganGaji = 0.12f;
+        return gajiPokok - (gajiPokok * potonganGaji);
+    }
 }
