@@ -260,6 +260,8 @@ public class Main {
         this.spaceLine("KONSEP JDBC");
         //KONSEP JDBC
 
+        Postgre pg1 = new Postgre();
+        pg1.connection();
 
         //END - JDBC
         this.spaceLine("");

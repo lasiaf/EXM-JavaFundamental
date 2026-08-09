@@ -9,10 +9,10 @@ public class Postgre implements Database{
         try {
 
             String url =
-                    "jdbc:postgresql://localhost:5432/mydb";
+                    "jdbc:postgresql://localhost:5433/plantations";
 
             String user = "postgres";
-            String password = "admin";
+            String password = "inipassw203";
 
             Connection conn =
                     DriverManager.getConnection(
