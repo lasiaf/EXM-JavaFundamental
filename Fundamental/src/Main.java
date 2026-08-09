@@ -262,7 +262,10 @@ public class Main {
 
         Postgre pg1 = new Postgre();
         pg1.connection();
-
+        pg1.selectData();
+        pg1.deleteData();
+        pg1.insertData();
+        pg1.updateData();
         //END - JDBC
         this.spaceLine("");
     }
