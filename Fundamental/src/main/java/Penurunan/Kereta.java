@@ -10,6 +10,10 @@ public class Kereta extends Kendaraan {
     public void about(){
         System.out.println("Ini class kereta");
     }
+    public void aboutSuper(){
+        System.out.print("Method Super : ");
+        super.about();
+    }
 
     @Override
     public String lihatBahanBakar(){

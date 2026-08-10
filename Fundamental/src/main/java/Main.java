@@ -67,6 +67,7 @@ public class Main {
         ob1.tampilJmlKursi();
         ob2.tampilJmlToilet();
         ob3.tampilJmlGerbong();
+        ob3.aboutSuper();
         //END - KONSEP PENURUNAN INHERITAGE
 
         this.spaceLine("");
