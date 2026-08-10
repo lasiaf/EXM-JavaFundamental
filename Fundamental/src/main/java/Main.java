@@ -2,7 +2,7 @@ import Abstraction.Air;
 import Abstraction.Padat;
 import Abstraction.Uap;
 import BasicCalculation.Calculation;
-import CollectionFramework.ArrayList;
+import CollectionFramework.ArrayLists;
 import CollectionFramework.HashMapList;
 import CollectionFramework.HashSetList;
 import Constructor.myConstructor;
@@ -206,8 +206,9 @@ public class Main {
         //KONSEP COLLECTION FRAMEWORK
         //ARRAY LIST
         this.spaceLine("Array List");
-        ArrayList li1 = new ArrayList();
+        ArrayLists li1 = new ArrayLists();
         li1.ArrayList();
+        li1.TanpaGeneric();
 
         this.spaceLine("-");
         //HASH MAP
@@ -239,7 +240,7 @@ public class Main {
         //STREAM
         this.spaceLine("STREAM");
         //Mengambil bilangan yang hanya bilangan genap
-        ArrayList li1 = new ArrayList();
+        ArrayLists li1 = new ArrayLists();
         li1.listStream();
         li1.mapStream();
         li1.mapSumStream();

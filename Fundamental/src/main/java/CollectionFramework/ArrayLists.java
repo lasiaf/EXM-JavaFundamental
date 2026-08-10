@@ -1,12 +1,13 @@
 package CollectionFramework;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ArrayList {
+public class ArrayLists {
 
     public void ArrayList(){
-        java.util.ArrayList<String> buah = new java.util.ArrayList<>();
+        ArrayList<String> buah = new ArrayList<>();
 
         buah.add("Jeruk");
         buah.add("Apel");
@@ -81,5 +82,15 @@ public class ArrayList {
                         .reduce(0, Integer::sum);
 
         System.out.println(total);
+    }
+
+    public void TanpaGeneric (){
+        ArrayList list = new ArrayList();
+        System.out.println("~Menampilkan Datanpa Generic (Lebih rumit)~");
+        list.add("Faisal");
+
+        String nama = (String) list.get(0); // harus casting
+        System.out.println(nama);
+
     }
 }
